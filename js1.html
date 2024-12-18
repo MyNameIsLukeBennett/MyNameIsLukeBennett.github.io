@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+</head>
+<body>
+    <h1>Welcome to JavaScript Basics!</h1>
+    
+    <p id="demo">This text will change.</p>
+    <button onclick="changeText()">Click Me</button>
+    
+    <button id="eventBtn">Press Me</button>
+    
+    <script>
+        alert("Welcome to JavaScript!");
+
+        let name = "Guzzler";
+        let age = 25;
+        let isSunny = true;
+        console.log("Hello, " + name);
+        console.log("Age:", age);
+
+        function greet(userName) {
+            return "Hello, " + userName + "!";
+        }
+        console.log(greet(name));
+
+        if (age >= 18) {
+            console.log("You are an adult.");
+        } else {
+            console.log("You are a minor.");
+        }
+
+        for (let i = 0; i < 3; i++) {
+            console.log("Iteration: " + i);
+        }
+
+        function changeText() {
+            document.getElementById("demo").innerHTML = "You clicked the button!";
+        }
+
+        document.getElementById("eventBtn").addEventListener("click", function() {
+            alert("Button pressed!");
+        });
+    </script>
+</body>
+</html>
+
